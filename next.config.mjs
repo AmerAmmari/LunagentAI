@@ -14,7 +14,7 @@ const nextConfig = {
   },
   output: "export",
   basePath:    '/LunagentAI',
-  assetPrefix: '/LunagentAI/',
+  assetPrefix: './',
   trailingSlash: true,
 }
 
