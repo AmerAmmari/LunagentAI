@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "python scripts/fix-assets.py",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
