@@ -4,6 +4,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/components/language-provider"
 import ScrollManager from "@/components/scroll-manager"
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: "Lunagent AI",
@@ -21,8 +22,10 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <LanguageProvider>
-            <ScrollManager />
-            {children}
+            <Suspense fallback={null}>
+              <ScrollManager />
+              {children}
+            </Suspense>
           </LanguageProvider>
         </ThemeProvider>
       </body>
