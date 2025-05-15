@@ -9,21 +9,21 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "Lunagent AI has completely transformed how we analyze customer data. The insights we've gained have directly contributed to a 35% increase in customer retention.",
+        "Zentropic AI has completely transformed how we analyze customer data. The insights we've gained have directly contributed to a 35% increase in customer retention.",
       author: "Sarah Johnson",
       title: "CMO, TechVision Inc.",
       avatar: "/placeholder.svg?height=80&width=80",
     },
     {
       quote:
-        "Implementing Lunagent's AI solutions has streamlined our operations and reduced manual processing time by 70%. Their team's expertise is unmatched.",
+        "Implementing Zentropic's AI solutions has streamlined our operations and reduced manual processing time by 70%. Their team's expertise is unmatched.",
       author: "Michael Chen",
       title: "CTO, Innovate Solutions",
       avatar: "/placeholder.svg?height=80&width=80",
     },
     {
       quote:
-        "The predictive analytics tools from Lunagent have given us a competitive edge in our market. We can now anticipate trends before they happen.",
+        "The predictive analytics tools from Zentropic have given us a competitive edge in our market. We can now anticipate trends before they happen.",
       author: "Jessica Williams",
       title: "Data Director, Global Retail",
       avatar: "/placeholder.svg?height=80&width=80",
@@ -44,7 +44,7 @@ export default function Testimonials() {
                 Trusted by Industry Leaders
               </h2>
               <p className="max-w-[900px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                See what our clients have to say about their experience working with Lunagent AI.
+                See what our clients have to say about their experience working with Zentropic AI.
               </p>
             </div>
           </div>

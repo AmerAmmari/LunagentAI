@@ -16,7 +16,7 @@ def main():
     cname = os.path.join(out_dir, 'CNAME')
     try:
         with open(cname, 'w') as f:
-            f.write('lunagent.ai')
+            f.write('zentropic.ai')
         print(f"👍 Wrote {cname}")
     except Exception as e:
         print(f"⚠️  Could not write CNAME: {e}")

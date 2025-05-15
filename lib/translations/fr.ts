@@ -15,7 +15,7 @@ export const fr = {
   hero: {
     title: "Transformez Votre Entreprise avec des Solutions d'IA",
     subtitle:
-      "Lunagent AI aide les entreprises à exploiter la puissance de l'intelligence artificielle pour automatiser les processus, obtenir des insights et stimuler la croissance.",
+      "Zentropic AI aide les entreprises à exploiter la puissance de l'intelligence artificielle pour automatiser les processus, obtenir des insights et stimuler la croissance.",
     getStarted: "Commencer",
     bookDemo: "Réserver une Démo",
     trustedBy: "Utilisé par",
@@ -120,23 +120,23 @@ export const fr = {
   testimonials: {
     title: "Témoignages",
     subtitle: "Approuvé par les Leaders de l'Industrie",
-    description: "Découvrez ce que nos clients disent de leur expérience avec Lunagent AI.",
+    description: "Découvrez ce que nos clients disent de leur expérience avec Zentropic AI.",
     items: [
       {
         quote:
-          "Lunagent AI a complètement transformé notre façon d'analyser les données clients. Les insights que nous avons obtenus ont directement contribué à une augmentation de 35% de la fidélisation des clients.",
+          "Zentropic AI a complètement transformé notre façon d'analyser les données clients. Les insights que nous avons obtenus ont directement contribué à une augmentation de 35% de la fidélisation des clients.",
         author: "Sarah Johnson",
         title: "CMO, TechVision Inc.",
       },
       {
         quote:
-          "L'implémentation des solutions d'IA de Lunagent a rationalisé nos opérations et réduit le temps de traitement manuel de 70%. L'expertise de leur équipe est inégalée.",
+          "L'implémentation des solutions d'IA de Zentropic a rationalisé nos opérations et réduit le temps de traitement manuel de 70%. L'expertise de leur équipe est inégalée.",
         author: "Michael Chen",
         title: "CTO, Innovate Solutions",
       },
       {
         quote:
-          "Les outils d'analyse prédictive de Lunagent nous ont donné un avantage concurrentiel sur notre marché. Nous pouvons maintenant anticiper les tendances avant qu'elles ne se produisent.",
+          "Les outils d'analyse prédictive de Zentropic nous ont donné un avantage concurrentiel sur notre marché. Nous pouvons maintenant anticiper les tendances avant qu'elles ne se produisent.",
         author: "Jessica Williams",
         title: "Directrice des Données, Global Retail",
       },
@@ -228,7 +228,7 @@ export const fr = {
       title: "Rejoignez Notre Équipe",
       subtitle: "Construisez l'Avenir de l'IA avec Nous",
       description:
-        "Chez Lunagent AI, notre mission est de transformer la façon dont les entreprises exploitent l'intelligence artificielle. Rejoignez notre équipe d'innovateurs, de résolveurs de problèmes et de visionnaires pour façonner l'avenir de la technologie d'IA.",
+        "Chez Zentropic AI, notre mission est de transformer la façon dont les entreprises exploitent l'intelligence artificielle. Rejoignez notre équipe d'innovateurs, de résolveurs de problèmes et de visionnaires pour façonner l'avenir de la technologie d'IA.",
       viewOpenings: "Voir les Postes Ouverts",
       learnCulture: "Découvrir Notre Culture",
     },
@@ -275,9 +275,9 @@ export const fr = {
         description:
           "Nous n'avons pas de postes ouverts pour le moment, mais nous sommes toujours intéressés à entrer en contact avec des personnes talentueuses passionnées par l'IA et la technologie.",
         message1:
-          "Si vous êtes intéressé par de futures opportunités chez Lunagent AI, veuillez consulter ultérieurement ou nous suivre sur les réseaux sociaux pour rester informé des nouvelles ouvertures.",
+          "Si vous êtes intéressé par de futures opportunités chez Zentropic AI, veuillez consulter ultérieurement ou nous suivre sur les réseaux sociaux pour rester informé des nouvelles ouvertures.",
         message2: "Vous pouvez également envoyer votre CV à",
-        email: "careers@lunagent.ai",
+        email: "careers@zentropic.ai",
         message3: "et nous conserverons vos informations pour de futures opportunités.",
       },
     },

@@ -30,7 +30,7 @@ export default function CareersHero() {
               Build the Future of AI with Us
             </h1>
             <p className="text-gray-500 dark:text-gray-400 md:text-xl max-w-[800px] mx-auto mb-8">
-              At Lunagent AI, we're on a mission to transform how businesses leverage artificial intelligence. Join our
+              At Zentropic AI, we're on a mission to transform how businesses leverage artificial intelligence. Join our
               team of innovators, problem-solvers, and visionaries to shape the future of AI technology.
             </p>
           </AnimatedSection>

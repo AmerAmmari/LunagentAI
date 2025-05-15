@@ -24,9 +24,9 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Link href="/" className="flex items-center gap-2" onClick={(e) => handleNavigation(e, "/#hero")}>
                 <div className="h-14 w-14 relative">
-                  <Image src="/logonoBG.png" alt="Lunagent AI Logo" fill className="object-contain" priority />
+                  <Image src="/logonoBG.png" alt="Zentropic AI Logo" fill className="object-contain" priority />
                 </div>
-                <span className="text-xl font-bold text-white">Lunagent AI</span>
+                <span className="text-xl font-bold text-white">Zentropic AI</span>
               </Link>
             </div>
             <p className="text-sm">
@@ -62,7 +62,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-sm">
-                <strong>Email:</strong> info@lunagent.ai
+                <strong>Email:</strong> info@zentropic.ai
               </li>
               <li className="text-sm">
                 <strong>Phone:</strong> +1 (555) 123-4567
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">© {currentYear} Lunagent AI. All rights reserved.</p>
+          <p className="text-sm">© {currentYear} Zentropic AI. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-sm hover:text-purple-400 transition-colors">
               Privacy Policy

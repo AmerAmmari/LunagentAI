@@ -165,7 +165,7 @@ export default function EmailUs() {
                   <Mail className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="text-lg font-semibold mb-1">Email</h3>
-                <p className="text-gray-500 dark:text-gray-400">info@lunagent.ai</p>
+                <p className="text-gray-500 dark:text-gray-400">info@zentropic.ai</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <div className="rounded-full bg-purple-100 dark:bg-purple-900/30 p-3 mb-4">

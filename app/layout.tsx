@@ -7,7 +7,7 @@ import ScrollManager from "@/components/scroll-manager"
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-  title: "Lunagent AI",
+  title: "Zentropic AI",
   description: "Transform Your Business with AI Solutions",
   generator: "v0.dev",
 }

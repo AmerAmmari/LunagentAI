@@ -46,13 +46,13 @@ export default function CareersOpenings() {
             </p>
             <div className="space-y-4">
               <p className="text-gray-600 dark:text-gray-300">
-                If you're interested in future opportunities at Lunagent AI, please check back later or connect with us
+                If you're interested in future opportunities at Zentropic AI, please check back later or connect with us
                 on social media to stay updated on new openings.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 You can also email your resume to{" "}
-                <a href="mailto:careers@lunagent.ai" className="text-purple-600 hover:underline">
-                  careers@lunagent.ai
+                <a href="mailto:careers@zentropic.ai" className="text-purple-600 hover:underline">
+                  careers@zentropic.ai
                 </a>{" "}
                 and we'll keep your information on file for future opportunities.
               </p>

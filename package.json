@@ -2,7 +2,7 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lunagent.ai/",
+  "homepage": "https://zentropic.ai/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

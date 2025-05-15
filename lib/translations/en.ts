@@ -15,7 +15,7 @@ export const en = {
   hero: {
     title: "Transform Your Business with AI Solutions",
     subtitle:
-      "Lunagent AI helps businesses harness the power of artificial intelligence to automate processes, gain insights, and drive growth.",
+      "Zentropic AI helps businesses harness the power of artificial intelligence to automate processes, gain insights, and drive growth.",
     getStarted: "Get Started",
     bookDemo: "Book a Demo",
     trustedBy: "Trusted by",
@@ -116,23 +116,23 @@ export const en = {
   testimonials: {
     title: "Testimonials",
     subtitle: "Trusted by Industry Leaders",
-    description: "See what our clients have to say about their experience working with Lunagent AI.",
+    description: "See what our clients have to say about their experience working with Zentropic AI.",
     items: [
       {
         quote:
-          "Lunagent AI has completely transformed how we analyze customer data. The insights we've gained have directly contributed to a 35% increase in customer retention.",
+          "Zentropic AI has completely transformed how we analyze customer data. The insights we've gained have directly contributed to a 35% increase in customer retention.",
         author: "Sarah Johnson",
         title: "CMO, TechVision Inc.",
       },
       {
         quote:
-          "Implementing Lunagent's AI solutions has streamlined our operations and reduced manual processing time by 70%. Their team's expertise is unmatched.",
+          "Implementing Zentropic's AI solutions has streamlined our operations and reduced manual processing time by 70%. Their team's expertise is unmatched.",
         author: "Michael Chen",
         title: "CTO, Innovate Solutions",
       },
       {
         quote:
-          "The predictive analytics tools from Lunagent have given us a competitive edge in our market. We can now anticipate trends before they happen.",
+          "The predictive analytics tools from Zentropic have given us a competitive edge in our market. We can now anticipate trends before they happen.",
         author: "Jessica Williams",
         title: "Data Director, Global Retail",
       },
@@ -222,7 +222,7 @@ export const en = {
       title: "Join Our Team",
       subtitle: "Build the Future of AI with Us",
       description:
-        "At Lunagent AI, we're on a mission to transform how businesses leverage artificial intelligence. Join our team of innovators, problem-solvers, and visionaries to shape the future of AI technology.",
+        "At Zentropic AI, we're on a mission to transform how businesses leverage artificial intelligence. Join our team of innovators, problem-solvers, and visionaries to shape the future of AI technology.",
       viewOpenings: "View Openings",
       learnCulture: "Learn About Our Culture",
     },
@@ -266,9 +266,9 @@ export const en = {
         description:
           "We don't have any open positions at the moment, but we're always interested in connecting with talented individuals who are passionate about AI and technology.",
         message1:
-          "If you're interested in future opportunities at Lunagent AI, please check back later or connect with us on social media to stay updated on new openings.",
+          "If you're interested in future opportunities at Zentropic AI, please check back later or connect with us on social media to stay updated on new openings.",
         message2: "You can also email your resume to",
-        email: "careers@lunagent.ai",
+        email: "careers@zentropic.ai",
         message3: "and we'll keep your information on file for future opportunities.",
       },
     },
