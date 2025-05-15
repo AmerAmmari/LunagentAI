@@ -6,6 +6,7 @@ A statically exported Next.js application powered by the App Router and TypeScri
 
 * Node.js v15+ (LTS) installed
 * npm (v8+) or Yarn
+* Python3
 * Git
 
 ## Clone & Install
