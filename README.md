@@ -1,6 +1,6 @@
 # Lunagent AI
 
-A statically exported Next.js application powered by the App Router and TypeScript. Hosted on GitHub Pages at `https://<your-username>.github.io/LunagentAI/`.
+A statically exported Next.js application powered by the App Router and TypeScript. Hosted on GitHub Pages at `https:lunagent.ai`.
 
 ## Prerequisites
 
