@@ -7,7 +7,7 @@ import Testimonials from "@/components/testimonials"
 import Pricing from "@/components/pricing"
 import Cta from "@/components/cta"
 import Footer from "@/components/footer"
-import { Suspense, useEffect } from "react"
+import { useEffect } from "react"
 
 export default function LandingPage() {
   // Ensure page scrolls to top on mount
