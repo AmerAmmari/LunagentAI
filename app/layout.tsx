@@ -24,8 +24,8 @@ export default function RootLayout({
           <LanguageProvider>
             <Suspense fallback={null}>
               <ScrollManager />
-              {children}
             </Suspense>
+            {children}
           </LanguageProvider>
         </ThemeProvider>
       </body>

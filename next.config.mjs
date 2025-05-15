@@ -10,6 +10,9 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
+  basePath: "/LunagentAI",
+  assetPrefix: "/LunagentAI/",
+  trailingSlash: true,
 }
 
 export default nextConfig
