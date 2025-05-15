@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === 'production';
 const repo   = 'LunagentAI';
 
 const nextConfig = {
@@ -14,8 +13,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
-  basePath: isProd ? `/${repo}` : '',
-  assetPrefix: isProd ? `/${repo}/` : '',
+  basePath:    '/LunagentAI',
+  assetPrefix: '/LunagentAI/',
   trailingSlash: true,
 }
 
