@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "python3 scripts/ensure-domain.py",
+    "postbuild": "python scripts/ensure-domain.py",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
