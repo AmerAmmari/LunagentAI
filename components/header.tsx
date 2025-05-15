@@ -60,7 +60,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2" onClick={(e) => handleNavigation(e, "/#hero")}>
             <div className="h-14 w-14 relative">
-              <Image src="/logonoBG.png" alt="Lunagent AI Logo" fill className="object-contain" priority />
+              <Image src="/LunagentAI/logonoBG.png" alt="Lunagent AI Logo" fill className="object-contain" priority />
             </div>
             <span className="text-xl font-bold">Lunagent AI</span>
           </Link>

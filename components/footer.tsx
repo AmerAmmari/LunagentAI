@@ -22,9 +22,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Link href="/#hero" className="flex items-center gap-2" onClick={(e) => handleNavigation(e, "/#hero")}>
+              <Link href="/" className="flex items-center gap-2" onClick={(e) => handleNavigation(e, "/#hero")}>
                 <div className="h-14 w-14 relative">
-                  <Image src="/logonoBG.png" alt="Lunagent AI Logo" fill className="object-contain" priority />
+                  <Image src="/LunagentAI/logonoBG.png" alt="Lunagent AI Logo" fill className="object-contain" priority />
                 </div>
                 <span className="text-xl font-bold text-white">Lunagent AI</span>
               </Link>

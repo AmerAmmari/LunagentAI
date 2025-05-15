@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const repo   = 'LunagentAI';
-
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,

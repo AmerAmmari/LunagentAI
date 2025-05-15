@@ -5,7 +5,7 @@ export const fr = {
     features: "Fonctionnalités",
     industries: "Industries",
     testimonials: "Témoignages",
-    pricing: "Tarification",
+    pricing: "Prix",
     careers: "Carrières",
     contact: "Contact",
     getStarted: "Commencer",
@@ -151,7 +151,7 @@ export const fr = {
     plans: [
       {
         name: "Débutant",
-        price: "99$",
+        price: "$99",
         period: "/mois",
         description: "Parfait pour les petites entreprises qui débutent avec l'IA.",
         features: [
@@ -165,7 +165,7 @@ export const fr = {
       },
       {
         name: "Professionnel",
-        price: "299$",
+        price: "$299",
         period: "/mois",
         description: "Idéal pour les entreprises en croissance qui cherchent à développer leurs capacités d'IA.",
         features: [
