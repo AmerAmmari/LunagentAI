@@ -25,19 +25,6 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        purple: {
-          50: "#f5f3ff",
-          100: "#ede9fe",
-          200: "#ddd6fe",
-          300: "#c4b5fd",
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          600: "#7c3aed",
-          700: "#6d28d9",
-          800: "#5b21b6",
-          900: "#4c1d95",
-          950: "#2e1065",
-        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -65,6 +52,35 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        indigo: {
+          900: "#1e1b4b",
+          950: "#121139",
+        },
+        cyan: {
+          50: "#ecfeff",
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#259ea7",
+          600: "#1e8087",
+          700: "#0e7490",
+          800: "#155e75",
+          900: "#164e63",
+        },
+        theme: {
+          primary: "#259ea7",
+          primaryDark: "#1e8087",
+          primaryLight: "#b3e3e7",
+          primaryLightest: "#e6f5f6",
+          cyanBg: "#e6f7f8", // Lighter cyan for better contrast
+          cyanBgDark: "#0e2c30", // Darker, more saturated cyan for dark mode
+        },
+        purple: {
+          100: "#f3e8ff",
+          500: "#9333ea",
+          600: "#7e22ce",
         },
       },
       borderRadius: {
