@@ -1,21 +1,15 @@
 import type React from "react"
-import "@/app/globals.css"
-import { Inter } from "next/font/google"
+import type { Metadata } from "next"
+import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/components/language-provider"
-import { cn } from "@/lib/utils"
-import PageTransition from "@/components/page-transition"
+import ScrollManager from "@/components/scroll-manager"
+import { Suspense } from 'react';
 
-const inter = Inter({ subsets: ["latin"] })
-
-export const metadata = {
-  title: "Zentropic AI - AI-Powered Solutions for Business Growth",
-  description: "We help businesses leverage cutting-edge technology to drive growth, efficiency, and innovation.",
-  keywords: ["Zentropic AI", "AI", "business growth", "technology solutions"],
-  icons: {
-    icon: "/favicon.ico",
-  },
-    generator: 'v0.dev'
+export const metadata: Metadata = {
+  title: "Zentropic AI",
+  description: "Transform Your Business with AI Solutions",
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -25,11 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className={cn("min-h-screen bg-background font-sans antialiased", inter.className)}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <LanguageProvider>
-            <PageTransition>{children}</PageTransition>
+            <Suspense fallback={null}>
+              <ScrollManager />
+            </Suspense>
+            {children}
           </LanguageProvider>
         </ThemeProvider>
       </body>
