@@ -258,7 +258,7 @@ export default function FeaturesPage() {
                   <DropdownMenuTrigger asChild>
                     <Button
                       variant="outline"
-                      className="flex items-center gap-2 border-theme-primary text-theme-primary hover:bg-theme-primaryLightest dark:hover:bg-theme-primary/20"
+                      className="flex items-center gap-2 border-theme-primary text-theme-primary hover:bg-theme-primaryLightest dark:hover:bg-theme-primary/20 w-full sm:w-auto"
                     >
                       Explore Industries
                       <ChevronDown className="h-4 w-4" />
@@ -275,8 +275,8 @@ export default function FeaturesPage() {
                   </DropdownMenuContent>
                 </DropdownMenu>
 
-                <Link href="/contact">
-                  <Button className="bg-theme-primary hover:bg-theme-primaryDark text-white w-full sm:w-auto">
+                <Link href="/contact" className="w-full sm:w-auto">
+                  <Button className="bg-theme-primary hover:bg-theme-primaryDark text-white w-full">
                     Contact Our Team
                   </Button>
                 </Link>

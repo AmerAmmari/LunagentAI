@@ -2,16 +2,24 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useLanguage } from "@/components/language-provider"
+import { Loader2 } from "lucide-react"
+import emailjs from "@emailjs/browser"
+
+type FormData = {
+  name: string
+  email: string
+  message: string
+}
 
 export default function ContactForm() {
   const { t } = useLanguage()
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
@@ -19,6 +27,27 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState("")
+  const [emailJSInitialized, setEmailJSInitialized] = useState(false)
+
+  // Initialize EmailJS once on component mount
+  useEffect(() => {
+    // Check if we're in the browser environment
+    if (typeof window !== "undefined") {
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+      if (publicKey) {
+        try {
+          emailjs.init(publicKey)
+          setEmailJSInitialized(true)
+        } catch (err) {
+          console.error("Error initializing EmailJS:", err)
+          setError("Failed to initialize email service")
+        }
+      } else {
+        console.warn("EmailJS public key not found")
+      }
+    }
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -30,14 +59,38 @@ export default function ContactForm() {
     setIsSubmitting(true)
     setError("")
 
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+    // Get environment variables directly
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
 
-      // Reset form and show success message
-      setFormData({ name: "", email: "", message: "" })
-      setIsSubmitted(true)
+    // Check if EmailJS environment variables are available
+    if (!serviceId || !templateId || !emailJSInitialized) {
+      setError("Email service is not configured properly. Please contact the administrator.")
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        to_email: "amerammari44@gmail.com",
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      }
+
+      // Send email using EmailJS
+      const response = await emailjs.send(serviceId, templateId, templateParams)
+
+      if (response.status === 200) {
+        // Reset form and show success message
+        setFormData({ name: "", email: "", message: "" })
+        setIsSubmitted(true)
+      } else {
+        throw new Error("Failed to send email")
+      }
     } catch (err) {
+      console.error("Error submitting form:", err)
       setError(t("errorMessage"))
     } finally {
       setIsSubmitting(false)
@@ -96,7 +149,14 @@ export default function ContactForm() {
           </div>
           {error && <p className="text-red-500 dark:text-red-400">{error}</p>}
           <Button type="submit" className="w-full bg-cyan-500 text-white hover:bg-cyan-600" disabled={isSubmitting}>
-            {isSubmitting ? t("sending") : t("sendMessage")}
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                {t("sending")}
+              </>
+            ) : (
+              t("sendMessage")
+            )}
           </Button>
         </form>
       )}

@@ -42,7 +42,7 @@ export default function AnimateInView({
           setIsInView(false)
         }
       },
-      { threshold },
+      { threshold: 0.1, rootMargin: "0px 0px 50px 0px" },
     )
 
     if (ref.current) {
@@ -54,14 +54,14 @@ export default function AnimateInView({
         observer.unobserve(ref.current)
       }
     }
-  }, [once, threshold])
+  }, [once])
 
   // If user prefers reduced motion, don't animate
   if (prefersReducedMotion) {
     return <div className={className}>{children}</div>
   }
 
-  // Define animation variants
+  // Simplify the animation variants
   const variants = {
     fadeIn: {
       hidden: { opacity: 0 },
@@ -71,22 +71,7 @@ export default function AnimateInView({
       hidden: { opacity: 0, y: 20 },
       visible: { opacity: 1, y: 0, transition: { duration, delay } },
     },
-    fadeInRight: {
-      hidden: { opacity: 0, x: -20 },
-      visible: { opacity: 1, x: 0, transition: { duration, delay } },
-    },
-    fadeInLeft: {
-      hidden: { opacity: 0, x: 20 },
-      visible: { opacity: 1, x: 0, transition: { duration, delay } },
-    },
-    scale: {
-      hidden: { opacity: 0, scale: 0.9 },
-      visible: { opacity: 1, scale: 1, transition: { duration, delay } },
-    },
-    none: {
-      hidden: {},
-      visible: {},
-    },
+    // Keep only the most essential variants and simplify them
   }
 
   const selectedVariant = variants[animation]

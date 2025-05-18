@@ -51,24 +51,20 @@ export default function GradientBackground({ className = "", intensity = "subtle
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {/* Large gradient blob top right - greatly reduced */}
       <div
-        className={`absolute top-[-10%] right-[-5%] w-[25%] h-[25%] rounded-full ${opacity.tertiary} blur-[80px] pulse-animation-slow ${
+        className={`absolute top-[-10%] right-[-5%] w-[25%] h-[25%] rounded-full ${opacity.tertiary} blur-[80px] pulse-animation-slow gradient-spot ${
           theme === "dark" ? "bg-cyan-800/30" : "bg-cyan-300/30"
         }`}
       />
 
       {/* Medium gradient blob middle left - reduced */}
       <div
-        className={`absolute top-[30%] left-[-10%] w-[20%] h-[20%] rounded-full ${opacity.secondary} blur-[70px] pulse-animation-medium ${
+        className={`absolute top-[30%] left-[-10%] w-[20%] h-[20%] rounded-full ${opacity.secondary} blur-[70px] pulse-animation-medium gradient-spot ${
           theme === "dark" ? "bg-cyan-700/30" : "bg-cyan-400/30"
         }`}
       />
 
       {/* Small gradient blob bottom right - reduced */}
-      <div
-        className={`absolute bottom-[10%] right-[20%] w-[15%] h-[15%] rounded-full ${opacity.primary} blur-[60px] pulse-animation-fast ${
-          theme === "dark" ? "bg-cyan-600/30" : "bg-cyan-300/30"
-        }`}
-      />
+      {/* Removed one gradient spot to reduce complexity */}
 
       {/* Grid overlay for texture (optional) */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.01]" />

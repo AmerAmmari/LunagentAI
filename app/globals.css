@@ -83,51 +83,75 @@
   background-size: 20px 20px;
 }
 
-/* Pulsing animations for gradient spots */
+/* Simplify pulsing animations for gradient spots */
 @keyframes pulseSlow {
-  0% {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulseMedium {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.08);
   }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes pulseMedium {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.12);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 @keyframes pulseFast {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
+  0%,
   100% {
     transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
+/* Add will-change to animation classes */
+.pulse-animation-slow,
+.pulse-animation-medium,
+.pulse-animation-fast {
+  will-change: transform;
+}
+
+/* Increase animation duration for less CPU usage */
 .pulse-animation-slow {
-  animation: pulseSlow 8s ease-in-out infinite;
+  animation: pulseSlow 10s ease-in-out infinite;
 }
 
 .pulse-animation-medium {
-  animation: pulseMedium 6s ease-in-out infinite;
+  animation: pulseMedium 8s ease-in-out infinite;
 }
 
 .pulse-animation-fast {
-  animation: pulseFast 4s ease-in-out infinite;
+  animation: pulseFast 6s ease-in-out infinite;
+}
+
+.pulse-animation-slow {
+  animation: pulseSlow 10s ease-in-out infinite;
+}
+
+.pulse-animation-medium {
+  animation: pulseMedium 8s ease-in-out infinite;
+}
+
+.pulse-animation-fast {
+  animation: pulseFast 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-animation-slow,
+  .pulse-animation-medium,
+  .pulse-animation-fast,
+  .fade-in {
+    animation: none !important;
+    transform: none !important;
+  }
 }

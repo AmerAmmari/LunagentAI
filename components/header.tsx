@@ -15,10 +15,10 @@ import { motion, AnimatePresence } from "framer-motion"
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme } = useTheme()
   const { language, toggleLanguage, t } = useLanguage()
   const [mounted, setMounted] = useState(false)
-  const [animationKey, setAnimationKey] = useState(0) // Key to force animation reset
+  const [animationKey, setAnimationKey] = useState(0)
   const router = useRouter()
   const pathname = usePathname()
 
@@ -147,29 +147,25 @@ export default function Header() {
     { name: t("contact"), href: "/contact", isPage: true },
   ]
 
-  // Standardized animation variants for all header elements
+  // Replace the existing headerVariants with this simpler version
   const headerVariants = {
-    hidden: { opacity: 0, y: -10 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut",
       },
     },
   }
 
-  // Standardized animation for all nav items
+  // Replace the existing navItemVariants with this simpler version
   const navItemVariants = {
-    hidden: { opacity: 0, y: -10 },
-    visible: (i: number) => ({
+    hidden: { opacity: 0 },
+    visible: (i) => ({
       opacity: 1,
-      y: 0,
       transition: {
-        delay: 0.05 * i,
-        duration: 0.3,
-        ease: "easeOut",
+        delay: i * 0.03, // Reduce delay between items
+        duration: 0.2,
       },
     }),
   }
@@ -228,9 +224,9 @@ export default function Header() {
                       <AnimatePresence mode="wait">
                         <motion.span
                           key={language}
-                          initial={{ y: 10, opacity: 0 }}
-                          animate={{ y: 0, opacity: 1 }}
-                          exit={{ y: -10, opacity: 0 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
                           transition={{ duration: 0.2 }}
                         >
                           {link.name}
@@ -254,9 +250,9 @@ export default function Header() {
                         <AnimatePresence mode="wait">
                           <motion.span
                             key={language}
-                            initial={{ y: 10, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -10, opacity: 0 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}
                           >
                             {link.name}
@@ -308,9 +304,9 @@ export default function Header() {
                       <AnimatePresence mode="wait">
                         <motion.span
                           key={language}
-                          initial={{ y: 10, opacity: 0 }}
-                          animate={{ y: 0, opacity: 1 }}
-                          exit={{ y: -10, opacity: 0 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
                           transition={{ duration: 0.2 }}
                         >
                           {link.name}
@@ -399,9 +395,9 @@ export default function Header() {
       {/* Mobile menu */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className="md:hidden bg-white dark:bg-gray-900 p-4 border-b border-gray-200 dark:border-gray-800"
         >

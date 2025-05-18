@@ -18,6 +18,7 @@ export const translations = {
     heroSubtitle: "with AI-Powered Solutions",
     heroDescription: "We help businesses leverage cutting-edge technology to drive growth, efficiency, and innovation.",
     learnMore: "Learn More",
+    scheduleDemo: "Schedule a Demo",
 
     // Process Section
     processTitle: "Our Process",
@@ -351,6 +352,7 @@ export const translations = {
     heroDescription:
       "Nous aidons les entreprises à exploiter une technologie de pointe pour stimuler la croissance, l'efficacité et l'innovation.",
     learnMore: "En Savoir Plus",
+    scheduleDemo: "Planifier une Démo",
 
     // Process Section
     processTitle: "Notre Processus",
@@ -542,7 +544,7 @@ export const translations = {
       "Systèmes d'intervention précoce pour les étudiants à risque",
       "Processus administratifs automatisés",
       "Outils d'évaluation alimentés par l'IA",
-      "Solutions intelligentes d'apprentissage à distance",
+      "Intelligent remote learning solutions",
     ],
     educationBenefits: [
       "Amélioration des résultats des étudiants",
@@ -553,7 +555,7 @@ export const translations = {
     ],
 
     // Marketing specific
-    marketingTitle: "Solutions d'IA pour le Marketing",
+    marketingTitle: "AI Solutions for Marketing",
     marketingSubtitle: "Optimiser les Campagnes et l'Engagement Client",
     marketingDescription:
       "Nos solutions d'IA aident les spécialistes du marketing à cibler efficacement les campagnes, à analyser le sentiment client et à optimiser la stratégie de contenu.",
@@ -565,11 +567,11 @@ export const translations = {
       "Allouer efficacement le budget marketing",
     ],
     marketingSolutions: [
-      "Ciblage d'audience alimenté par l'IA",
-      "Outils d'analyse de sentiment",
-      "Génération et optimisation automatisées de contenu",
-      "Analytique avancée de campagne",
-      "Allocation intelligente du budget",
+      "AI-powered audience targeting",
+      "Sentiment analysis tools",
+      "Automated content generation and optimization",
+      "Advanced campaign analytics",
+      "Intelligent budget allocation",
     ],
     marketingBenefits: [
       "Amélioration du ROI des campagnes",
