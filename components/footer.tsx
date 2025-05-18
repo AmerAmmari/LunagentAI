@@ -1,88 +1,143 @@
 "use client"
 
-import type React from "react"
-
 import Link from "next/link"
-import { Linkedin } from "lucide-react"
-import { useRouter } from "next/navigation"
 import Image from "next/image"
+import { Linkedin } from "lucide-react"
+import { useLanguage } from "@/components/language-provider"
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-  const router = useRouter()
-
-  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
-    router.push(href)
-  }
+  const { t } = useLanguage()
 
   return (
-    <footer id="contact" className="bg-gray-900 text-gray-300">
-      <div className="container px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Link href="/" className="flex items-center gap-2" onClick={(e) => handleNavigation(e, "/#hero")}>
-                <div className="h-14 w-14 relative">
-                  <Image src="/logonoBG.png" alt="Zentropic AI Logo" fill className="object-contain" priority />
-                </div>
-                <span className="text-xl font-bold text-white">Zentropic AI</span>
-              </Link>
-            </div>
-            <p className="text-sm">
-              Empowering businesses with intelligent AI solutions to drive growth and innovation.
-            </p>
+    <footer className="bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 py-12 md:py-16 border-t border-gray-200 dark:border-gray-700">
+      <div className="container px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="space-y-4 md:col-span-2">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src="/images/logo.png" alt="Zentropic AI Logo" width={32} height={32} className="h-8 w-auto" />
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">Zentropic AI</span>
+            </Link>
+            <p className="text-gray-600 dark:text-gray-300">{t("heroDescription")}</p>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-purple-400 transition-colors">
-                <Linkedin size={20} />
+              <Link
+                href="#"
+                className="text-gray-500 hover:text-theme-primary dark:text-gray-400 dark:hover:text-theme-primary"
+              >
+                <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
           </div>
+
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+            <h3 className="text-lg font-bold mb-4 text-gray-900 dark:text-white">{t("companyTitle")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-sm hover:text-purple-400 transition-colors">
-                  About Us
+                <Link
+                  href="#"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("aboutUs")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/careers"
-                  className="text-sm hover:text-purple-400 transition-colors"
-                  onClick={(e) => handleNavigation(e, "/careers")}
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
                 >
-                  Careers
+                  {t("careers")}
                 </Link>
               </li>
             </ul>
           </div>
+
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+            <h3 className="text-lg font-bold mb-4 text-gray-900 dark:text-white">{t("useCasesTitle")}</h3>
             <ul className="space-y-2">
-              <li className="text-sm">
-                <strong>Email:</strong> info@zentropic.ai
+              <li>
+                <Link
+                  href="/industries/healthcare"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("industry1Title")}
+                </Link>
               </li>
-              <li className="text-sm">
-                <strong>Phone:</strong> +1 (555) 123-4567
+              <li>
+                <Link
+                  href="/industries/finance"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("industry2Title")}
+                </Link>
               </li>
-              <li className="text-sm">
-                <strong>Address:</strong> 123 AI Boulevard, Tech City, TC 98765
+              <li>
+                <Link
+                  href="/industries/retail"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("industry3Title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/manufacturing"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("industry4Title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/education"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("industry5Title")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries/marketing"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("industry6Title")}
+                </Link>
               </li>
             </ul>
           </div>
-        </div>
-        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">© {currentYear} Zentropic AI. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-sm hover:text-purple-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm hover:text-purple-400 transition-colors">
-              Terms of Service
-            </Link>
+
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-gray-900 dark:text-white">{t("legalTitle")}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("privacyPolicy")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-of-service"
+                  className="text-gray-600 hover:text-theme-primary dark:text-gray-300 dark:hover:text-theme-primary"
+                >
+                  {t("termsOfService")}
+                </Link>
+              </li>
+            </ul>
+
+            <h3 className="text-lg font-bold mb-4 mt-6 text-gray-900 dark:text-white">{t("contactTitle")}</h3>
+            <ul className="space-y-2">
+              <li className="text-gray-600 dark:text-gray-300">Email: info@zentropicai.com</li>
+              <li className="text-gray-600 dark:text-gray-300">{t("phone")}: +1 (555) 123-4567</li>
+            </ul>
           </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-500 dark:text-gray-400">
+          <p>
+            © {new Date().getFullYear()} Zentropic AI. {t("allRightsReserved")}
+          </p>
         </div>
       </div>
     </footer>
